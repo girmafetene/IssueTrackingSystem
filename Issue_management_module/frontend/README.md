@@ -1,3 +1,3 @@
 # Issue Tracking System
-## Isuue management module
+## Issue management module
 ### frontend
