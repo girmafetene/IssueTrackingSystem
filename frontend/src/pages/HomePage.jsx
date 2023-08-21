@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react';
 import "../assets/css/home.css" 
 import { Outlet, Link } from "react-router-dom";
 
+
 function Home() {
   const [show, setShow] = useState(false)
   const showButon =()=>{
@@ -19,7 +20,7 @@ function Home() {
       <div className="px-2 bg-white flex justify-between  w-full h-[55px] shadow-xl items-center border-b to-50 ">
       <div class="mb-4">
   <img
-    src="C:\Users\Esrael\Desktop\Issue Tracking Software Project\logo-sm.png"
+    src="src/images/logo.png"
     class="h-auto max-w-xs rounded-full"
     alt="logo" />
 </div>
@@ -34,9 +35,9 @@ function Home() {
         <div>
           <Link to={'/contact'}>Contact Us</Link>
         </div>
-        <div>
+        {/* <div>
           <Link to={'/issue'}>Issues</Link>
-        </div>
+        </div> */}
         <div>
           <Link to={'/admin'}>Admin</Link>
         </div>
@@ -65,12 +66,249 @@ function Home() {
 <p className="mb-3 text-white text-left py-0 px-80 "> Our mission is to empower businesses and individuals with transformative software solutions that harness the power of technology to solve complex challenges. We strive to deliver excellence through our unwavering commitment to innovation, quality, and customer satisfaction.</p>
 
     </div>
-  
+
     </div>
 
     <div className="py-4 px-96" >
     <button class="bg-white hover:bg-orange-800 text-orange-600 font-bold py-2 px-4 rounded">Learn More</button>
     </div>
+     <div className="text-orange-500 font-extrabold text-3xl text-center py-6">
+      Our Products
+     </div>
+    <div
+  id="carouselExampleIndicators"
+  class="relative"
+  data-te-carousel-init
+  data-te-ride="carousel">
+  {/* <!--Carousel indicators--> */}
+  <div
+    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-te-carousel-indicators>
+    <button
+      type="button"
+      data-te-target="#carouselExampleIndicators"
+      data-te-slide-to="0"
+      data-te-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleIndicators"
+      data-te-slide-to="1"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleIndicators"
+      data-te-slide-to="2"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 3"></button>
+  </div>
+
+  {/* <!--Carousel items--> */}
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    {/* <!--First item--> */}
+    <div
+      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-item
+      data-te-carousel-active>
+      <img
+        src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+        class="block w-full"
+        alt="Software 1" />
+    </div>
+    {/* <!--Second item--> */}
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-item>
+      <img
+        src="https://mdbcdn.b-cdn.net/img/nehttps://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60w/slides/042.webp"
+        class="block w-full"
+        alt="Software 2" />
+    </div>
+    {/* <!--Third item--> */}
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-item>
+      <img
+        src="https://plus.unsplash.com/premium_photo-1683147803878-48aaeed6684f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+        class="block w-full"
+        alt="Software 3" />
+    </div>
+  </div>
+
+  {/* <!--Carousel controls - prev item--> */}
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleIndicators"
+    data-te-slide="prev">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+  {/* <!--Carousel controls - next item--> */}
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleIndicators"
+    data-te-slide="next">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button>
+</div>
+
+    {/* <div
+  id="carouselExampleCrossfade"
+  class="relative"
+  data-te-carousel-init
+  data-te-ride="carousel">
+  
+  <div
+    class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-te-carousel-indicators>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="0"
+      data-te-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="1"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="2"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 3"></button>
+  </div>
+
+  
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    
+    <div
+      class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item
+      data-te-carousel-active>
+      <img
+        src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+        class="block w-full"
+        alt="software 1" />
+    </div>
+    
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <img
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+        class="block w-full"
+        alt="Software 2" />
+    </div>
+    
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <img
+        src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+        class="block w-full"
+        alt="Software 3" />
+    </div>
+  </div>
+
+ 
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCrossfade"
+    data-te-slide="prev">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+ 
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCrossfade"
+    data-te-slide="next">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button>
+</div> */}
 
    <div className="bg-gray-900">
     
@@ -79,19 +317,19 @@ function Home() {
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="C:\Users\Esrael\Desktop\Issue Tracking Software Project" class="h-8 mr-3" alt="company Logo" />
+                  <img src="src/images/logo-sm.png" class="h-8 mr-3" alt="company Logo" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GET-NET SOFT </span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">useful links</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                          <a href="https://flowbite.com/" class="hover:underline">About us</a>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
                       </li>
                   </ul>
               </div>
