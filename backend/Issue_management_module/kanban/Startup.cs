@@ -23,8 +23,8 @@ namespace Kanban
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
            string connection = Configuration.GetConnectionString("DefaultConnection");
-          // services.AddDbContext<DashboardContext>(options =>
-              // options.UseSqlServer(connection));
+          services.AddDbContext<DashboardContext>(options =>
+            options.UseMySQL(connection));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
           //  services.AddReact();

@@ -21,7 +21,7 @@ namespace Kanban.Models
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           // optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=dashboarddb;Trusted_Connection=True;");
+            optionsBuilder.UseMySQL(@"server=localhost ; user=root; database=issuedb; password=");
         }
     }
 }
