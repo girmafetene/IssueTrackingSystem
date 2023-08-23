@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Kanban.Models
 {
-    public sealed class DashboardContext : DbContext
+    public class DashboardContext : DbContext
     {
         public DbSet<Card> Cards { get; set; }
         public DbSet<State> States { get; set; }
@@ -19,9 +19,11 @@ namespace Kanban.Models
 
             SaveChanges();
         }
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(@"server=localhost ; user=root; database=issuedb; password=");
         }
+        */
     }
 }
