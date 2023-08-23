@@ -1,59 +1,78 @@
+import React from "react";
+import '../assets/css/issue.css';
+
 function Issue(){
     return (
         <>
-        <div className="h-screen w-full bg-cyan-950">
-        <section>
-  <header class="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
-    <div class="flex items-center justify-between">
-      <h2 class="font-semibold text-slate-900">Projects</h2>
-      <a href="/new" class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm">
-        <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
-          <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
-        </svg>
-        New
-      </a>
+        <div className="h-screen w-full bg-cyan-950 overflow-auto">
+        <div className="text-white font-extrabold text-3xl text-center py-2">Hello!</div>
+        <div className="text-white font-semibold text-ellipsis text-center py-0"> Please Submit your Issue here </div>
+        <div className="issue"> 
+        <div className="centered-content">
+        <form class="w-full max-w-lg mt-10">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-10 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-orange-600 text-xs font-bold mb-2" for="grid-first-name">
+         Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder=" Issue reporter name"></input>
     </div>
-    <form class="group relative">
-      <svg width="20" height="20" fill="currentColor" class="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" aria-hidden="true">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
-      </svg>
-      <input class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm" type="text" aria-label="Filter projects" placeholder="Filter projects..."></input>
-    </form>
-  </header>
-  <ul class="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6">
-    <li x-for="project in projects">
-      {/* </li><a :href="project.url" class="hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm"> */}
-        <dl class="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
-          <div>
-            <dt class="sr-only">Title</dt>
-            <dd class="group-hover:text-white font-semibold text-slate-900">
-              {project.title}
-            </dd>
-          </div>
-          <div>
-            <dt class="sr-only">Category</dt>
-            <dd class="group-hover:text-blue-200">{project.category}</dd>
-          </div>
-          <div class="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
-            <dt class="sr-only">Users</dt>
-            {/* <dd x-for="user in project.users" class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
-              <img :src="user.avatar" :alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
-            </dd> */}
-          </div>
-        </dl>
-      {/* </a> */}
-    </li>
-    <li class="flex">
-      <a href="/new" class="hover:border-blue-500 hover:border-solid hover:bg-white hover:text-blue-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed border-slate-300 text-sm leading-6 text-slate-900 font-medium py-3">
-        <svg class="group-hover:text-blue-500 mb-1 text-slate-400" width="20" height="20" fill="currentColor" aria-hidden="true">
-          <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
-        </svg>
-        New project
-      </a>
-    </li>
-  </ul>
-</section>
+    <div class="w-full md:w-1/2 px-10">
+      <label class="block uppercase tracking-wide text-orange-600 text-xs font-bold mb-2" for="grid-last-name">
+         Company Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="company name"></input>
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-10">
+      {/* <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="Please describe your issue here"></input> */}
+      
+        <label for="message" class="block uppercase tracking-wide text-orange-600 text-xs font-bold mb-2">ISSUE DESCRIPTION</label>
+        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Describe your issue here..."></textarea>
+
+    </div>
+  </div>
+
+{/* license */}
+<div class="flex flex-wrap -mx-3 mb-6"> 
+<div class="w-full md:w-1/2 px-10 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-orange-600 text-xs font-bold mb-2" for="grid-license">
+         License 
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-license" type="string" placeholder="license"></input>
+    </div>
+    </div>
+  <div class="flex flex-wrap -mx-3 mb-2">
+   
+    <div class="w-full md:w-1/2 px-10 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-orange-500 text-xs font-bold mb-2" for="grid-state">
+         Category
+      </label>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+          <option>Category 1</option>
+          <option>Category 2</option>
+          <option>Category 3</option>
+          <option>Unknown</option>
+        </select>
+
+        <div className="py-10">
+        <label class="block uppercase tracking-wide text-orange-500 text-xs font-bold mb-2" for="file_input">UPLOAD FILE</label>
+        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"></input>
+        </div>
         
+        <div>
+        <button type="submit" class="flex w-full justify-center rounded-md bg-orange-600 px-35 py-1.5 text-sm  font-semibold leading-6 text-white shadow-sm hover:bg-orange-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+
         </div>
         </>
     )
