@@ -35,10 +35,14 @@ function Home() {
         <div>
           <Link to={'/contact'}>Contact Us</Link>
         </div>
-        <div>
+        {/* <div>
           <Link to={'/issue'}>Issues</Link>
+<<<<<<< HEAD
         </div>
 
+=======
+        </div> */}
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
         <div>
           <Link to={'/profile'}>Profile</Link>
         </div>
@@ -80,6 +84,7 @@ function Home() {
      <div className="text-orange-500 font-extrabold text-3xl text-center py-6">
       Our Products
      </div>
+<<<<<<< HEAD
 
 {/* Product card 1 */}
 
@@ -142,6 +147,8 @@ function Home() {
 </div>
 
 {/* carousel */}
+=======
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
     <div
   id="carouselExampleIndicators"
   class="relative"

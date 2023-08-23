@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import '../assets/css/issue.css';
 
@@ -76,5 +77,14 @@ function Issue(){
         </div>
         </>
     )
+=======
+import React from 'react'
+
+function IssuePage() {
+  return (
+    <div>IssuePage</div>
+  )
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
 }
-export default Issue;
+
+export default IssuePage
