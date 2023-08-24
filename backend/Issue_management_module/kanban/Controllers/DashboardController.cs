@@ -34,6 +34,7 @@ namespace Kanban.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Card card)
         {
+            businessLogic = new BusinessLogic();
             businessLogic.AddCard(card);
             return CreatedAtAction(nameof(Get), new { id = card.Id }, card);
         }

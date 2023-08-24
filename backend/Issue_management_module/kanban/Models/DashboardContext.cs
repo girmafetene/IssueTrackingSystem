@@ -9,7 +9,7 @@ namespace Kanban.Models
         public DbSet<State> States { get; set; }
         public DashboardContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
             if (States.ToList().Any())
                 return;
 

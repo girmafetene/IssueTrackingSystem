@@ -27,11 +27,11 @@ namespace Kanban.Models
         {
             using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
             {
-                // card.Id = Guid.NewGuid();
-                // card.State = context.States.FirstOrDefault(s => s.Name == "ToDo");
-                // context.Add(card);
-                // context.SaveChanges();
-                    return null;
+                 //card.Id = Guid.NewGuid();
+                 //card.State = context.States.FirstOrDefault(s => s.Name == "ToDo");
+                 //context.Add(card);
+                 //context.SaveChanges();
+                 return null;
             }
         }
 
