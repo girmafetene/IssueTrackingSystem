@@ -4876,19 +4876,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hp\\.nuget\\packages\\": {}
+    "C:\\Users\\Wubishet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Intern\\C#\\UserManagementService\\UserManagement\\UserManagement.csproj",
+      "projectUniqueName": "C:\\Users\\Wubishet\\Documents\\GitHub\\IssueTrackingSystem\\backend\\UserManagementService\\UserManagement\\UserManagement.csproj",
       "projectName": "UserManagement",
-      "projectPath": "A:\\Intern\\C#\\UserManagementService\\UserManagement\\UserManagement.csproj",
-      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "A:\\Intern\\C#\\UserManagementService\\UserManagement\\obj\\",
+      "projectPath": "C:\\Users\\Wubishet\\Documents\\GitHub\\IssueTrackingSystem\\backend\\UserManagementService\\UserManagement\\UserManagement.csproj",
+      "packagesPath": "C:\\Users\\Wubishet\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Wubishet\\Documents\\GitHub\\IssueTrackingSystem\\backend\\UserManagementService\\UserManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Wubishet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4972,7 +4972,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
