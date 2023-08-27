@@ -1,7 +1,7 @@
 function Login(){
     return (
         <>
-        <div className="h-screen w-full bg-cyan-950">
+        <div className="h-screen w-full bg-cyan-950 overflow-auto">
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Sign in </h2>
@@ -35,7 +35,7 @@ function Login(){
 
     <p class="mt-10 text-center text-sm text-gray-500">
       Don't have an account?
-      <a href="#" class="font-semibold leading-6 text-orange-600 hover:text-orange-800">Sign Up</a>
+      <a href="#" class="font-semibold leading-6 text-orange-600 hover:text-orange-800"> Sign Up</a>
     </p>
   </div>
 </div>

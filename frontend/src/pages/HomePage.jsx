@@ -14,7 +14,7 @@ function Home() {
   return (
       
     <>
-    <div className=" h-screen w-full bg-cyan-950">
+    <div className=" h-screen w-full bg-cyan-950 ">
       <div className=" issue_tracking h-[50vh] w-full rounded-3xl">
       <h1 className="absolute bottom-80 px-4 py-3  text-white font-semibold text-4xl"> GET-NET Software Solutions </h1>
       <div className="px-2 bg-white flex justify-between  w-full h-[55px] shadow-xl items-center border-b to-50 ">
@@ -37,10 +37,19 @@ function Home() {
         </div>
         {/* <div>
           <Link to={'/issue'}>Issues</Link>
-        </div> */}
-        <div>
-          <Link to={'/admin'}>Admin</Link>
+<<<<<<< HEAD
         </div>
+
+=======
+        </div> */}
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
+        <div>
+          <Link to={'/profile'}>Profile</Link>
+        </div>
+
+        {/* <div>
+          <Link to={'/admin'}>Admin</Link>
+        </div> */}
       </div>
       <div  className="flex   space-x-3  md:hidden"  onclick  >
  {/* {
@@ -75,6 +84,71 @@ function Home() {
      <div className="text-orange-500 font-extrabold text-3xl text-center py-6">
       Our Products
      </div>
+<<<<<<< HEAD
+
+{/* Product card 1 */}
+
+<div className="md:flex   space-x-3  hidden">
+     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="https://images.unsplash.com/photo-1580983559367-0dc2f8934365?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c29mdHdhcmUlMjBwcm9kdWNydHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="product image" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Issue Tracking System</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Elevate project management efficiency with our cutting-edge Issue Tracking System, ensuring seamless collaboration and problem-solving for your business.</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+{/* product card 2 */}
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="https://media.istockphoto.com/id/906778080/photo/doctor-working-on-laptop-computer-with-report-analysis-and-money-about-healthcare-costs-and.webp?b=1&s=170667a&w=0&k=20&c=Vht-Cxn1qVXl25MP00vXUIb1ABnojT68H5LP67kRx1s=" alt="product image" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Hospital Management System</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Optimize healthcare operations seamlessly with our advanced Hospital Management System, empowering medical facilities to enhance patient care and streamline administrative tasks.</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+{/* product card 3 */}
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg" src="https://media.istockphoto.com/id/1335050732/photo/businessman-using-a-computer-to-document-management-concept-online-documentation-database-and.webp?b=1&s=170667a&w=0&k=20&c=6eJ_nYSg_9m_vJ_usNLPnwvhoq23XYI6cE9NZv18Z3A=" alt="product image" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">License Management System</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Simplify software compliance and maximize license utilization with our innovative License Management System, empowering businesses to effortlessly manage their software assets</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+</div>
+
+{/* carousel */}
+=======
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
     <div
   id="carouselExampleIndicators"
   class="relative"

@@ -7,6 +7,10 @@ export default {
   theme: {
     extend: {},
   },
+<<<<<<< HEAD
+  plugins: [],
+  
+=======
   // plugins: [require("daisyui")],
   // daisyui: {
   //   themes: [
@@ -33,5 +37,6 @@ export default {
   //     },
   //   ],
   // }
+>>>>>>> 9b9b4fedd05f006af387fa077eb393c5c988bb1b
 }
 

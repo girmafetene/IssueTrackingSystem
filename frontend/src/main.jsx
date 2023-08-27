@@ -7,7 +7,7 @@ import Signup from './pages/SignupPage.jsx'
 import Contact from './pages/ContactPage.jsx'
 import Issue from './pages/IssuePage.jsx'
 import Admin from './pages/AdminPage.jsx'
-
+// import Profile from './pages/ProfilePage.jsx'
 
 import {
   createBrowserRouter,
@@ -43,6 +43,11 @@ const router = createBrowserRouter([
   path: "/admin",
   element: <Admin/>,
 },
+
+// {
+//   path: "/profile",
+//   element: <Profile/>,
+// },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

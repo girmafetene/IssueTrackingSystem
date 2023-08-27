@@ -1,8 +1,8 @@
 function Contact(){
   return (
       <>
-      <div className="h-screen w-full bg-cyan-950">
-   <div className="text-white font-extrabold">Contact Us </div>
+      <div className="h-screen w-full bg-cyan-950 overflow-auto">
+   <div className="text-white font-extrabold text-3xl py-8 text-center">Contact Us </div>
 <div class="container my-24 mx-auto md:px-6">
 
   <section class="mb-32">
@@ -120,6 +120,9 @@ function Contact(){
   </section>
 
 </div>
+  
+
+
 
       </div>
       </>
