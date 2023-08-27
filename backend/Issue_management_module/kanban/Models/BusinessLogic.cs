@@ -13,27 +13,39 @@ namespace Kanban.Models
             }
         }
 
-        public virtual void AddCard(Card card)
+       public virtual void AddCard(Card card)
+{
+    using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
+    {
+        card.Id = Guid.NewGuid();
+        var state = context.States.FirstOrDefault(s => s.Name == "ToDo");
+        if (state != null)
         {
-            using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
-            {
-                card.Id = Guid.NewGuid();
-                card.State = context.States.FirstOrDefault(s => s.Name == "ToDo");
-                context.Add(card);
-                context.SaveChanges();
-            }
+            card.State = state;
         }
-        public virtual IEnumerable<Card> GetCard(Card card)
+        else
         {
-            using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
-            {
-                // card.Id = Guid.NewGuid();
-                // card.State = context.States.FirstOrDefault(s => s.Name == "ToDo");
-                // context.Add(card);
-                // context.SaveChanges();
-                    return null;
-            }
+            // Handle the case when the state is not found
+            // For example, you can throw an exception or set a default state
+            // card.State = defaultState;
         }
+        context.Add(card);
+        context.SaveChanges();
+    }
+}
+        
+        public virtual Card GetCard(Guid id)
+{
+    using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
+    {
+        var card = new Card();
+        card.Id = id;
+        card.State = context.States.FirstOrDefault(s => s.Name == "ToDo");
+        context.Add(card);
+        context.SaveChanges();
+        return card;
+    }
+}
 
         public virtual Card UpdateCard(Card uCard)
         {
@@ -52,21 +64,22 @@ namespace Kanban.Models
             }
         }
 
-        public virtual Card ChangeStatusCard(Guid id)
-        {
-            using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
-            {
-                var card = context.Cards.Include(c => c.State).SingleOrDefault(m => m.Id == id);
-                if (card == null)
-                    return null;
+      public virtual Card ChangeStatusCard(Guid id)
+{
+    using (var context = new DashboardContext(new DbContextOptions<DashboardContext>()))
+    {
+        var card = context.Cards.Include(c => c.State).SingleOrDefault(m => m.Id == id);
+        if (card == null)
+            return null;
 
-                card.State = context.States.FirstOrDefault(s => s.Priority == card.State.Priority + 1);
-                context.SaveChanges();
+        card.State = context.States.FirstOrDefault(s => s.Priority == card.State.Priority + 1);
+        context.SaveChanges();
 
-                var dashboardContext = context.Cards.Include(c => c.State);
-                return dashboardContext.FirstOrDefault(c => c.Id == card.Id);
-            }
-        }
+        // Return the modified 'card' object directly
+        return card;
+    }
+}
+
 
         public virtual Card DeleteCard(Guid id)
         {
@@ -82,9 +95,7 @@ namespace Kanban.Models
             }
         }
 
-        internal object GetCard(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
+
 }
